@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="info">
+
+
+    <!--日志处理-->
+    <Appenders>
+        <!--控制台输出 appender-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%-5level] %class{36}:%L --- %m%n"/>
+        </Console>
+
+<!--        &lt;!&ndash;异步database日志&ndash;&gt;-->
+<!--        <Async name="AsyncJDBC">-->
+<!--            <AppenderRef ref="database"/>-->
+<!--        </Async>-->
+    </Appenders>
+
+    <!--logger定义-->
+    <Loggers>
+
+        <!--rootLogger配置-->
+        <root level="debug">
+            <AppenderRef ref="Console"/>
+        </root>
+
+    </Loggers>
+
+</Configuration>
